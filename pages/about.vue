@@ -25,7 +25,10 @@
 </main>
 </template>
 
-<style>
+
+<style lang="scss" scoped>
+
+@import '~./sass/main';
 main {
 background: var(--black-high-) 0% 0% no-repeat padding-box;
 }

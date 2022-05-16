@@ -39,17 +39,17 @@
 <section class="second_sec">
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6 text-center text">
-        <p>
+    <div class="col-md-4 text-center text">
+        <p class="new">
   New Range
   </p>
-  <p>
+  <p class="la">
  LA FERRARI
   </p>
-  <NuxtLink to="/about" class="nav-link" id="contact">Learn More</NuxtLink>
+  <NuxtLink to="/about" class="learn">Learn More</NuxtLink>
     </div>
 
-    <div class="col-md-6 ferrari">
+    <div class="col-md-8 ferrari">
     <img src="../assets/drive/car-1.jpg" alt="...">
 
     </div>
@@ -59,18 +59,18 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-6 model">
+    <div class="col-md-8 model">
         <img src="../assets/drive/car-2.jpg" alt="...">
     </div>
 
-    <div class="col-md-6 text-center text">
-          <p>
+    <div class="col-md-4 text-center text">
+          <p class="new">
   New Range
   </p>
-  <p>
+  <p class="la">
 MODEL S
   </p>
-  <NuxtLink to="/about" class="nav-link" id="contact">Learn More</NuxtLink>
+  <NuxtLink to="/about" class="learn">Learn More</NuxtLink>
     </div>
   </div>
 </div>
@@ -131,7 +131,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
 @import '~./sass/main';
 
 .navbar {
@@ -156,17 +156,48 @@ color: var(--unnamed-color-ff0050);
 font: normal normal medium 16px/22px Poppins;
 letter-spacing: 0.64px;
 }
+#contact {
+color: #FFFFFF;
+}
 .nav-item {
   letter-spacing: 1.6px;
 }
 #goose {
   top: 172px;
 }
+.learn {
+color: var(--unnamed-color-ff0050);
+text-align: left;
+font: normal normal normal 16px/25px Poppins;
+letter-spacing: 0.64px;
+opacity: 1;
+text-decoration: none;
+}
+.new{
+text-align: left;
+font: normal normal normal 18px/75px Proxima Nova;
+letter-spacing: 0.72px;
+color: #FFFFFF;
+text-transform: uppercase;
+opacity: 0.6;
+}
+.la {
+font-family: Proxima Nova;
+text-align: left;
+font: normal normal 800 56px/75px Proxima Nova;
+letter-spacing: 1.12px;
+color: #FFFFFF;
+text-transform: uppercase;
+opacity: 0.87;
+}
 .ferrari img {
   width: 100%;
 }
 .model img {
   width: 100%;
+}
+.text{
+padding-top: 15%;
 }
 .btn {
 border: 2px solid var(--unnamed-color-ff0050);
@@ -176,6 +207,7 @@ opacity: 1;
 font: normal normal medium 18px/21px Poppins;
 letter-spacing: 0.36px;
 color: #FFFFFF;
+text-decoration: none;
 }
 .carousel-caption {
   position: absolute;

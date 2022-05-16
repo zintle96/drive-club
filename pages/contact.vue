@@ -35,3 +35,31 @@
 
 </main>
 </template>
+
+<style lang="scss" scoped>
+
+@import '~./sass/main';
+.navbar {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    top:0;
+    z-index: 9999;
+}
+.navbar-nav {
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+}
+#contact {
+color: var(--unnamed-color-ff0050);
+font: normal normal medium 16px/22px Poppins;
+letter-spacing: 0.64px;
+}
+#home {
+color: #FFFFFF;
+}
+.nav-item {
+  letter-spacing: 1.6px;
+}
+</style>
