@@ -1,6 +1,6 @@
 <template>
 <main>
-<section>
+<section class="first-section">
   <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="../assets/drive/logo.svg"></a>
@@ -10,46 +10,118 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <NuxtLink to="/#" class="nav-link" id="home">Home</NuxtLink>
+         <NuxtLink to="/#" class="nav-link" id="home">Home</NuxtLink>
         </li>
         <li class="nav-item">
-          <NuxtLink to="/contact" class="nav-link">Contact Us</NuxtLink>
+        <NuxtLink to="/contact" class="nav-link" id="contact">Contact Us</NuxtLink>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<div class="content">
-  <img src="../assets/drive/hero-home.jpg" class="d-block w-100"/>
-
-   <div class="content-caption d-md-block">
-      <p class="goose">Goosebumps</p>
-      <p class="come">Come standard</p>
-      <p class="para">Discover the benefits of DRIVECLUB Trade-in and get a free vehicle evaluation</p>
-
-<button type="button" class="btn">Contact Us</button>
+<div class="carousel-inner">
+    <div class="carousel-item">
+    <img src="../assets/drive/hero-home.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-md-block">
+      <p>Goosebumps</p>
+        <p>Come Standard</p>
+        <p>Discover the benefits of DRIVECLUB Trade-in and get a free vehicle evaluation</p>
+        <div class="btn btn-primary">
+        <NuxtLink to="/contact">Contact Us</NuxtLink>
+        </div>
+      </div>
+    </div>
   </div>
 
-</div>
 </section>
 
-<section>
- <div class="container">
-   <div class="row">
-     <div class="col-md-6 new">
-
-      </div>
-
-     <div class="col-md-6">
-<img src="../assets/drive/car-1.jpg" class="w-100">
-
-  </div>
+<section class="second_sec">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 text-center text">
+        <p>
+  New Range
+  </p>
+  <p>
+ LA FERRARI
+  </p>
+  <NuxtLink to="/about" class="nav-link" id="contact">Learn More</NuxtLink>
     </div>
 
- </div>
+    <div class="col-md-6 ferrari">
+    <img src="../assets/drive/car-1.jpg" alt="...">
+
+    </div>
+    
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 model">
+        <img src="../assets/drive/car-2.jpg" alt="...">
+    </div>
+
+    <div class="col-md-6 text-center text">
+          <p>
+  New Range
+  </p>
+  <p>
+MODEL S
+  </p>
+  <NuxtLink to="/about" class="nav-link" id="contact">Learn More</NuxtLink>
+    </div>
+  </div>
+</div>
 
 </section>
+
+<section class="third_sec">
+  <!-- footer -->
+<footer class="p-5 text-light position-relative" id="contact">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+
+    <img src="../assets/drive/logo.svg">
+      <p class="lead">&copy; Driveclub. All rights reserved.</p>
+
+ <div class="social-links px-3">
+        <a href="..."> <img src="../assets/drive/facebook.svg"></a>
+        <a href="..."> <img src="../assets/drive/instagram.svg" alt=""></a>
+        <a href="..."> <img src="../assets/drive/twitter.svg"></a>
+          <a href="..."> <img src="../assets/drive/linkedin.svg"></a>
+            <a href="..."> <img src="../assets/drive/youtube.svg"></a>
+</div>
+    </div>
+
+     <div class="col-md-6">
+      <div class="container">
+  <div class="row">
+
+    <div class="col-md-6">
+    MODELS
+    <p>LA FERRARI</p>
+     <p>MODEL S</p>
+    </div>
+
+      <div class="col-md-6">
+    MORE
+     <p>HOME</p>
+      <p>CONTACT US</p>
+    </div>
+
+  </div>
+</div>
+    </div>
+
+  </div>
+</div>
+
+    </footer>
+
+    </section>
 </main>
 </template>
 
@@ -60,25 +132,43 @@ export default {
 </script>
 
 <style lang='scss'>
+@import '~./sass/main';
 
 .navbar {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 9999
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    top:0;
+    z-index: 9999;
+}
+.lead {
+  opacity: 0.48;
+  letter-spacing: 0.56px;
+}
+
+.navbar-nav {
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
 }
 #home {
-  color: #FF0050;
+color: var(--unnamed-color-ff0050);
+font: normal normal medium 16px/22px Poppins;
+letter-spacing: 0.64px;
 }
-.new {
-  background: #171B1E 0% 0% no-repeat padding-box;
-opacity: 1;
+.nav-item {
+  letter-spacing: 1.6px;
+}
+#goose {
+  top: 172px;
+}
+.ferrari img {
+  width: 100%;
+}
+.model img {
+  width: 100%;
 }
 .btn {
-top: 419px;
-left: 140px;
-width: 156px;
-height: 48px;
 border: 2px solid var(--unnamed-color-ff0050);
 background: #FF00504D 0% 0% no-repeat padding-box;
 border: 2px solid #FF0050;
@@ -87,58 +177,28 @@ font: normal normal medium 18px/21px Poppins;
 letter-spacing: 0.36px;
 color: #FFFFFF;
 }
-.navbar-brand {
-top: 36px;
-left: 120px;
-width: 148px;
-height: 16px;
-background: 0% 0% no-repeat padding-box;
-opacity: 1;
+.carousel-caption {
+  position: absolute;
+  top: 200px;
+  color: white;
 }
-
-.nav-link {
-  text-align: center;
-font: normal normal 300 16px/22px Poppins;
-letter-spacing: 0.64px;
-color: #FFFFFF;
-opacity: 0.87;
-text-transform: uppercase;
-top: 32px;
-left: 1223px;
-width: 106px;
-height: 23px;
+.second_sec{
+  background: var(--black-high-) 0% 0% no-repeat padding-box;
 }
-.content {
-   height: 500px !important;
+.second_sec .nav-link {
+  letter-spacing: 0.64px;
+  color: var(--unnamed-color-ff0050);
 }
-.content-caption {
-     padding-bottom: 150px;
-   top: 172px;
-left: 140px;
-width: 714px;
-height: 91px;
-text-align: left;
-color: #FFFFFF;
-}
-
-.content-caption .goose{
-font: normal normal 800 80px/75px Proxima Nova;
-letter-spacing: 1.6px;
-opacity: 0.87;
-text-transform: uppercase;
-}
-
-.content-caption .come {
-
-font: normal normal 800 40px/38px Proxima Nova;
-letter-spacing: 1.6px;
-opacity: 0.87;
-text-transform: uppercase;
-}
-.content-caption .para {
-
-font: normal normal 300 16px/22px Poppins;
-letter-spacing: 0.32px;
+.second_sec p{
+  text-transform: uppercase;
 opacity: 0.6;
+color: #FFFFFF;
+}
+.social-links a{
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.third_sec{
+  background: var(--grey-1000-elevation-) 0% 0% no-repeat padding-box;
 }
 </style>
