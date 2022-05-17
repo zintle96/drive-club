@@ -21,13 +21,13 @@
 </nav>
 
 <div class="carousel-inner">
-    <div class="carousel-item">
+    <div class="carousel-item ">
     <img src="../assets/drive/hero-home.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-md-block">
-      <p>Goosebumps</p>
-        <p>Come Standard</p>
-        <p>Discover the benefits of DRIVECLUB Trade-in and get a free vehicle evaluation</p>
-        <div class="btn btn-primary">
+      <div class="carousel-caption d-md-block px-5">
+      <p id="goose">Goosebumps</p>
+        <p id="come">Come Standard</p>
+        <p id="para">Discover the benefits of DRIVECLUB Trade-in and get a free vehicle evaluation</p>
+        <div class="btn">
         <NuxtLink to="/contact">Contact Us</NuxtLink>
         </div>
       </div>
@@ -50,17 +50,22 @@
     </div>
 
     <div class="col-md-8 ferrari">
-    <img src="../assets/drive/car-1.jpg" alt="...">
+    <figure>
+     <img src="../assets/drive/car-1.jpg" class="car" alt="...">
+    </figure>
+
 
     </div>
-    
+
   </div>
 </div>
 
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-8 model">
-        <img src="../assets/drive/car-2.jpg" alt="...">
+      <figure>
+        <img src="../assets/drive/car-2.jpg" class="car" alt="...">
+      </figure>
     </div>
 
     <div class="col-md-4 text-center text">
@@ -101,15 +106,15 @@ MODEL S
   <div class="row">
 
     <div class="col-md-6">
-    MODELS
-    <p>LA FERRARI</p>
-     <p>MODEL S</p>
+    <p>MODELS</p>
+    <div class="footer-text">LA FERRARI<br>
+     MODEL S</div>
     </div>
 
       <div class="col-md-6">
-    MORE
-     <p>HOME</p>
-      <p>CONTACT US</p>
+    <p>MORE</p>
+     <div class="footer-text">HOME <br>
+      CONTACT US</div>
     </div>
 
   </div>
@@ -145,7 +150,10 @@ export default {
   opacity: 0.48;
   letter-spacing: 0.56px;
 }
-
+.footer-text{
+  opacity: 0.48;
+  letter-spacing: 0.56px;
+}
 .navbar-nav {
     display: flex;
     text-align: right;
@@ -163,7 +171,27 @@ color: #FFFFFF;
   letter-spacing: 1.6px;
 }
 #goose {
-  top: 172px;
+ text-align: left;
+font: normal normal 800 80px/75px Proxima Nova;
+letter-spacing: 1.6px;
+color: #FFFFFF;
+text-transform: uppercase;
+opacity: 0.87;
+}
+#come {
+text-align: left;
+font: normal normal 800 40px/38px Proxima Nova;
+letter-spacing: 1.6px;
+color: #FFFFFF;
+text-transform: uppercase;
+opacity: 0.87;
+}
+#para {
+text-align: left;
+font: normal normal 300 16px/22px Poppins;
+letter-spacing: 0.32px;
+color: #FFFFFF;
+opacity: 0.6;
 }
 .learn {
 color: var(--unnamed-color-ff0050);
@@ -190,8 +218,32 @@ color: #FFFFFF;
 text-transform: uppercase;
 opacity: 0.87;
 }
+/* Opacity #2 */
+.ferrari figure {
+	background: #ff0050;
+}
+.ferrari figure img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.ferrari figure:hover img {
+	opacity: .5;
+}
 .ferrari img {
   width: 100%;
+
+}
+.model figure {
+	background: #ff0050;
+}
+.model figure img {
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.model figure:hover img {
+	opacity: .5;
 }
 .model img {
   width: 100%;
@@ -233,4 +285,54 @@ color: #FFFFFF;
 .third_sec{
   background: var(--grey-1000-elevation-) 0% 0% no-repeat padding-box;
 }
+
+ @media(max-width:1105px){
+#goose {
+  font: normal normal 800 48px/75px Proxima Nova;
+letter-spacing: 0.96px;
+}
+.carousel-caption{
+   position: absolute;
+  top: 90px;
+}
+ }
+
+ @media(max-width: 788px){
+   .carousel-caption{
+   position: absolute;
+  top: 50px;
+}
+ }
+@media(max-width: 680px){
+     .carousel-caption{
+   position: absolute;
+  top: 40px;
+  padding: 0;
+  margin: 0;
+}
+#goose {
+  font: normal normal 800 25px/65px Proxima Nova;
+}
+#come{
+  font: normal normal 800 16px/65px Proxima Nova;
+}
+#para{
+font: normal normal 800 12px/65px Proxima Nova;
+}
+}
+ @media(max-width: 320px){
+   .carousel-caption{
+   position: absolute;
+  top: 30px;
+}
+#goose {
+  font: normal normal 800 20px/65px Proxima Nova;
+}
+#come{
+  font: normal normal 800 13px/65px Proxima Nova;
+}
+#para{
+font: normal normal 800 9px/65px Proxima Nova;
+}
+ }
 </style>
