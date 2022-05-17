@@ -28,7 +28,8 @@
         <p id="come">Come Standard</p>
         <p id="para">Discover the benefits of DRIVECLUB Trade-in and get a free vehicle evaluation</p>
         <button class="btn">
-        <NuxtLink class="btnLink" to="/contact">Contact Us</NuxtLink>
+        <NuxtLink style="color:#ffff; text-decoration:none;" to="/contact">Contact Us</NuxtLink>
+           <i class="fa fa-angle-right " aria-hidden="fasle"></i>
         </button>
       </div>
     </div>
@@ -265,9 +266,25 @@ font: normal normal medium 18px/21px Poppins;
 letter-spacing: 0.36px;
 color: #FFFFFF;
 text-decoration: none;
+
 }
+
 .btn:hover{
+
 background: #ff0050;
+}
+/* .btn .fa-angle-right{
+   visibility: hidden;
+} */
+/* .btn .fa-angle-right::before{
+
+} */
+.btn .fa-angle-right::before{
+visibility: hidden;
+}
+.btn:hover .fa-angle-right::before{
+visibility: visible;
+color: white;
 }
 .btn{
 	opacity: 1;
@@ -277,6 +294,7 @@ background: #ff0050;
 .btn:hover {
 	opacity: 6;
 }
+
 .carousel-caption {
   position: absolute;
   top: 200px;
