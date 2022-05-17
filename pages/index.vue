@@ -27,9 +27,9 @@
       <p id="goose">Goosebumps</p>
         <p id="come">Come Standard</p>
         <p id="para">Discover the benefits of DRIVECLUB Trade-in and get a free vehicle evaluation</p>
-        <div class="btn">
-        <NuxtLink to="/contact">Contact Us</NuxtLink>
-        </div>
+        <button class="btn">
+        <NuxtLink class="btnLink" to="/contact">Contact Us</NuxtLink>
+        </button>
       </div>
     </div>
   </div>
@@ -139,6 +139,11 @@ export default {
 <style lang='scss' scoped>
 @import '~./sass/main';
 
+.btnLink{
+  color:#fff;
+  text-decoration:none;
+
+}
 .navbar {
     cursor: pointer;
     position: absolute;
@@ -260,6 +265,17 @@ font: normal normal medium 18px/21px Poppins;
 letter-spacing: 0.36px;
 color: #FFFFFF;
 text-decoration: none;
+}
+.btn:hover{
+background: #ff0050;
+}
+.btn{
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.btn:hover {
+	opacity: 6;
 }
 .carousel-caption {
   position: absolute;
