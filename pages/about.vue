@@ -1,7 +1,7 @@
 <template>
 <main>
   <section class="first_sec">
-  <i class="far fa-window-close"></i>
+  <i class="far fa-window-close"><NuxtLink to="/#"></NuxtLink></i>
     <div class ="container-fluid">
     <div class="row">
 
