@@ -175,6 +175,7 @@ color: #FFFFFF;
 }
 .nav-item {
   letter-spacing: 1.6px;
+  text-transform: uppercase;
 }
 #goose {
  text-align: left;
@@ -199,9 +200,10 @@ letter-spacing: 0.32px;
 color: #FFFFFF;
 opacity: 0.6;
 }
-.learn {
-color: var(--unnamed-color-ff0050);
+.text .learn {
 text-align: left;
+left: 140px;
+color: var(--unnamed-color-ff0050);
 font: normal normal normal 16px/25px Poppins;
 letter-spacing: 0.64px;
 opacity: 1;
@@ -315,6 +317,9 @@ color: #FFFFFF;
 .social-links a{
   padding-left: 2%;
   padding-right: 2%;
+}
+.footer-text:hover{
+  color: var(--unnamed-color-ff0050);
 }
 .third_sec{
   background: var(--grey-1000-elevation-) 0% 0% no-repeat padding-box;

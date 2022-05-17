@@ -1,6 +1,7 @@
 <template>
 <main>
   <section class="first_sec">
+  <i class="far fa-window-close"></i>
     <div class ="container-fluid">
     <div class="row">
 
@@ -59,6 +60,11 @@ color: #FFFFFF;
 text-transform: uppercase;
 opacity: 0.6;
 }
-
+.fa-window-close{
+  top:0;
+  right:0;
+  position:absolute;
+  color:red;
+}
 
 </style>

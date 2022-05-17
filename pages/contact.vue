@@ -229,6 +229,10 @@ color: #FFFFFF;
 text-transform: uppercase;
 opacity: 0.87;
 }
+.form-control{
+  border: 1px solid #FFFFFFDE;
+opacity: 0.87;
+}
 .btn {
 border: 2px solid var(--unnamed-color-ff0050);
 background: #FF00504D 0% 0% no-repeat padding-box;
@@ -263,9 +267,15 @@ letter-spacing: 0.36px;
 color: #FFFFFF;
 opacity: 0.87;
 }
+.footer-text:hover{
+  color: var(--unnamed-color-ff0050);
+}
 .social-links a{
   padding-left: 2%;
   padding-right: 2%;
+}
+.social-links:hover{
+  color: var(--unnamed-color-ff0050);
 }
 .third_sec{
   background: var(--grey-1000-elevation-) 0% 0% no-repeat padding-box;
